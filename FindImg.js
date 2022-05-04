@@ -149,5 +149,4 @@ setTimeout(() => {
     document.body.appendChild(text)
 }, 3000)
 
-
 findImg()
