@@ -1,13 +1,18 @@
 /**
  * Function which gives possibility to change the 'alt' attribute of any clickable <img/> on the page
- *
- * @param  inputWrapper  Wrapper for input in what you can edit the 'alt' <img/> attribute
- * @see    undefined              HTMLElement
+ * @return undefined
  */
-function findImg(inputWrapper){
+function findImg(){
 
-    let inputField = document.createElement('input');
-    inputWrapper.appendChild(inputField)
+    const inputField = document.createElement('input');
+    inputField.style.position = 'absolute';
+    inputField.style.zIndex = '1000';
+    inputField.style.right = '100px';
+    inputField.style.top = '100px';
+
+    const body = document.querySelector('body');
+
+    body.appendChild(inputField)
 
     const standardImageBorder = '3px solid red';
     const chosenImageBorder = '5px solid green';
