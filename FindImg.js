@@ -151,4 +151,4 @@ setTimeout(() => {
 }, 3000)
 
 
-findImg(document.querySelector('body'))
+findImg()
