@@ -1,3 +1,9 @@
+/**
+ * Function which gives possibility to change the 'alt' attribute of any clickable <img/> on the page
+ *
+ * @param  inputWrapper  Wrapper for input in what you can edit the 'alt' <img/> attribute
+ * @see    undefined              HTMLElement
+ */
 function findImg(inputWrapper){
 
     let inputField = document.createElement('input');
