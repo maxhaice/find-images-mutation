@@ -5,7 +5,7 @@
 function findImg(){
 
     const inputField = document.createElement('input');
-    inputField.style.position = 'absolute';
+    inputField.style.position = 'fixed';
     inputField.style.zIndex = '1000';
     inputField.style.right = '100px';
     inputField.style.top = '100px';
