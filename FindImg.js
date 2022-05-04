@@ -4,6 +4,13 @@
  */
 function findImg(){
 
+    const standardImageBorder = '3px solid red';
+    const chosenImageBorder = '5px solid green';
+    const chosenShadow = 'green 0 0 13px 20px';
+    const standardShadow = 'none';
+
+    let chosenImg = null;
+
     const inputField = document.createElement('input');
     inputField.style.position = 'fixed';
     inputField.style.zIndex = '1000';
@@ -13,13 +20,6 @@ function findImg(){
     const body = document.querySelector('body');
 
     body.appendChild(inputField)
-
-    const standardImageBorder = '3px solid red';
-    const chosenImageBorder = '5px solid green';
-    const chosenShadow = 'green 0 0 13px 20px';
-    const standardShadow = 'none';
-
-    let chosenImg = null;
 
     inputField.addEventListener('focusout', (event) => {
         if(chosenImg) {
@@ -47,7 +47,7 @@ function findImg(){
     })
 
     function setImageBorder(node, borderStyle) {
-            node.style.border = borderStyle;
+        node.style.border = borderStyle;
     }
 
     function setImageShadow(node, shadowStyle) {
@@ -117,10 +117,9 @@ function findImg(){
         }
     })()
 
-    const container = document.querySelector('body');
 
     // Observe a specific DOM element:
-    observeDOM( container, function(m){
+    observeDOM( body, function(m){
         let addedNodes = [];
 
         m.forEach(record => record.addedNodes.length & addedNodes.push(...record.addedNodes))
